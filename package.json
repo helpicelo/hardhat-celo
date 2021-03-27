@@ -1,0 +1,44 @@
+{
+  "name": "@ubeswap/hardhat-celo",
+  "version": "0.3.0",
+  "description": "Celo integration for Hardhat",
+  "main": "./lib/src/index.js",
+  "types": "./lib/src/index.d.ts",
+  "repository": "git@github.com:Ubeswap/hardhat-celo.git",
+  "author": "Ian Macalinao <ian@ubeswap.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc"
+  },
+  "devDependencies": {
+    "@celo/contractkit": "^1.0.2",
+    "ethers": "^5.0.31",
+    "hardhat": "^2.0.10",
+    "husky": "=4",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@celo-tools/celo-ethers-wrapper": "^0.0.5"
+  },
+  "peerDependencies": {
+    "@celo/contractkit": "^1.0.2",
+    "ethers": "^5.0.31",
+    "hardhat": "^2.0.10"
+  },
+  "prettier": {},
+  "files": [
+    "lib",
+    "README.md"
+  ]
+}
